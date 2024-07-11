@@ -1,0 +1,173 @@
+@import url('reset.css');
+
+.items{
+    height: 50px;
+    
+}
+
+.items ul{
+    display: flex;
+    
+    justify-content: center;       
+}
+
+.items li{
+    margin-left: 20px;
+    position: relative;    
+    height: 40px;
+}
+
+.items li::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 16px;
+    background-color: black;
+
+    position: absolute;
+    right: -11px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.items li:nth-last-child(1)::before{
+    display: none;
+}
+
+.items a{
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+}
+
+.items li a:hover{
+    border-bottom: 3px solid #149173;
+    font-weight: bold;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.news img{
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    margin-right: 10px;
+}
+
+.news .newopen{
+    display: flex;
+    min-width: 1200px;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #149173;
+    position: relative;
+}
+
+.news .sales{
+    display: flex;
+    min-width: 1200px;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #149173;
+    position: relative;
+}
+ 
+.news .date{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    border: 1px solid #149173;
+    text-align: center;
+    width: 70px;
+    height: 60px;
+    color: #149173;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: white;
+    position: absolute;
+    right: -10px;
+    top: -20px;
+}
+
+.date h1{
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.right{
+    width: 100%;
+    margin: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    border: 1px solid #149173;
+}
+
+.news h3{
+    font-size: 1.5rem;
+    color:  #FFA62B;
+    margin-bottom: 10px;
+}
+
+.news h2{
+    font-size: 2rem;
+    color:  #149173;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.news p{
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.news a{
+    color:#FFA62B;
+}
+
+/* .new .newopen:hover{
+    background-color: rgba(20, 145, 115, .5);
+}  */
+
+.pages ul{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 20px;
+}
+.pages li{  
+    margin: 0 5px;
+}
+
+.pages a{
+    display: block;
+    min-width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid black;
+    font-size: 1rem; 
+    color: black;
+    background-color: white;
+    box-sizing: border-box;
+    
+}
+.pages a:hover{
+    background-color:#EBF38B;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+

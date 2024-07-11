@@ -1,0 +1,114 @@
+@import url('reset.css');
+
+.items{
+    height: 50px;
+    
+}
+
+.items ul{
+    display: flex;
+    justify-content: center;       
+}
+
+.items li{
+    margin-left: 20px;
+    position: relative;    
+    height: 40px;
+}
+
+.items li::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 16px;
+    background-color: black;
+
+    position: absolute;
+    right: -11px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.items li:nth-last-child(1)::before{
+    display: none;
+}
+
+.items a{
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+}
+
+.items li a:hover{
+    border-bottom: 3px solid #149173;
+    font-weight: bold;
+}
+
+.center .line{
+    width: 100%;
+    height: 1px;
+    display: block;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu ul{
+    text-align: center;
+    display: flex;
+}
+
+.menu  li{
+    margin-right: 30px; 
+    width: 250px;
+    
+}
+
+.menu ul img{
+    width: 250px;
+    height: 250px;
+}
+
+.menu h3{
+    margin: 5px auto 10px;
+    font-size: 1.2rem;
+    color: #149173;
+    font-weight: bold;
+}
+
+.pages ul{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.pages li{  
+    margin: 0 5px;
+}
+
+.pages a{
+    display: block;
+    min-width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid black;
+    font-size: 1rem; 
+    color: black;
+    background-color: white;
+    box-sizing: border-box;
+    
+}
+.pages a:hover{
+    background-color:#EBF38B;
+    color: white;
+}
+
