@@ -1,13 +1,12 @@
-@import url('reset.css');
 
 .items{
     height: 50px;
-    
+    margin-bottom: 20px;
 }
 
 .items ul{
     display: flex;
-    
+   
     justify-content: center;       
 }
 
@@ -39,7 +38,6 @@
     font-size: 1.2rem;
     display: block;
     text-align: center;
-    line-height: 40px;
     color: black;
 }
 
@@ -50,21 +48,22 @@
 
 .news {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin: 0 auto;
 }
 
 .news img{
-    padding: 10px;
-    width: 250px;
+    padding-top:10px;
+    padding-left:10px;
+    width: 200px;
     height: 250px;
-    margin-right: 10px;
 }
 
 .news .newopen{
     display: flex;
-    min-width: 1200px;
+    max-width: 500px;
     width: 100%;
+    margin-right: 20px;
     margin-bottom: 30px;
     border: 1px solid #149173;
     position: relative;
@@ -72,13 +71,21 @@
 
 .news .sales{
     display: flex;
-    min-width: 1200px;
+    max-width: 500px;
     width: 100%;
     margin-bottom: 30px;
     border: 1px solid #149173;
     position: relative;
 }
- 
+
+.newopen:hover {
+    background-color: rgba(20, 145, 115, .5);
+} 
+
+.sales:hover {
+    background-color: rgba(20, 145, 115, .5);
+} 
+
 .news .date{
     display: flex;
     flex-direction: column;
@@ -87,18 +94,23 @@
     text-align: center;
     width: 70px;
     height: 60px;
-    color: #149173;
+    color: white;
     font-weight: bold;
     font-size: 1.2rem;
-    background-color: white;
+    background-color:#149173 ;
     position: absolute;
     right: -10px;
     top: -20px;
 }
 
-.date h1{
-    padding-top: 10px;
-    margin-bottom: 5px;
+.newopen:hover .date{
+    color: #149173 ;
+    background-color:white;
+}
+
+.sales:hover .date{
+    color: #149173 ;
+    background-color:white;
 }
 
 .right{
@@ -110,29 +122,44 @@
 }
 
 .news h3{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
     color:  #FFA62B;
     margin-bottom: 10px;
 }
 
 .news h2{
-    font-size: 2rem;
+    font-size: 1.3rem;
     color:  #149173;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .news p{
+    font-size: 16px;
     margin-bottom: 20px;
-    line-height: 1.2;
+    color:#000;
+
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
-.news a{
+
+
+
+.news a:nth-last-child(1){
     color:#FFA62B;
 }
 
-/* .new .newopen:hover{
-    background-color: rgba(20, 145, 115, .5);
-}  */
+
 
 .pages ul{
     display: flex;

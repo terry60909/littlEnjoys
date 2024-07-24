@@ -32,21 +32,21 @@
             
             
             <ul>
-                <li><label >問題分類:  </label><select name="sel">
+                <li><label >&nbsp;&nbsp;問題分類:  </label><select name="sel">
                     <option value selected>請選擇分類</option>
                     <option value="門市服務" >門市服務</option>
                     <option value="飲品售後建議" >飲品售後建議</option>
                     <option value="異業/聯名合作" >異業/聯名合作</option>
                     <option value="其他" >其他</option></select></li>
-                <li><label><em>*</em>姓名 Name:  </label><input type="text" class="name"></li>
-                <li><label><em>*</em>性別 Gender:  </label><input type="radio" name="gender" class="male"><span>男</span>
+                <li><label><em>*</em>姓名 Name:  </label><input type="text" class="name" placeholder="姓名"></li>
+                <li><label><em>*</em>性別 Gender:  </label><input type="radio" name="gender" class="male" checked><span>男</span>
                     <input type="radio" name="gender" class="female"><span>女</span>
                 </li>
-                <li><label>年齡 Ages:  </label><input type="text" class="phone"></li>
-                <li><label>電話 Phone:  </label><input type="text" class="phone"></li>
-                <li><label><em>*</em>信箱 Email:  </label><input type="text" class="mail"></li>
-                <li><label>門市名稱 Store Name:  </label><input type="" value=""></li>
-                <li><label>消費日期 Date:  </label><input type="" value=""></li>
+                <li><label>&nbsp;&nbsp;年齡 Ages:  </label><input type="tel" class="ages" placeholder="年齡" maxlength="3"></li>
+                <li><label>&nbsp;&nbsp;手機 Phone:  </label><input type="tel"  class="phone" placeholder="09xxxxxxxx" maxlength="10" pattern="09\d{2}\-?d{3}\-d{3}"></li>
+                <li><label><em>*</em>信箱 Email:  </label><input type="email" class="mail" placeholder="信箱" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></li>
+                <li><label>&nbsp;&nbsp;門市名稱 Store Name:  </label><input type="text" placeholder="門市名稱"></li>
+                <li><label>&nbsp;&nbsp;消費日期 Date:  </label><input type="date" ></li>
                 <li><label><em>*</em>請輸入您的留言 Messages:  </label><br><textarea name="" class="Message" cols="100" rows="10" maxlength="250"></textarea> </li>
                 <li><input type="submit" class="send" value="送出"></li>
                 

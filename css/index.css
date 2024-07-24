@@ -1,15 +1,13 @@
-@import url(reset.css);
-
 
 .main{
     margin: 0 auto 20px;
+    
 
 	position: relative;
 }
 .main img{
     width: 100%;
-    min-width: 1000px;
-    
+     
 }
 
 .main .left{
@@ -114,7 +112,7 @@
 
 .introduce p{
 	font-size: 1.5rem;
-	line-height: 1.2;
+	
 }
 
 .main1 ul{
@@ -130,12 +128,13 @@
 }
 
 .main1 li:before{
+    
     content: '';
     width: 170px;
     height: 170px;
     border: 1px solid white;
-    position: absolute;
     
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -148,28 +147,31 @@
 
 
 
-.card {
+.main2_card{
     display: flex;
-	border: 1px solid #149173;
-	margin-bottom: 20px;
 }
 
 .card img{
     padding: 10px;
     width: 250px;
     height: 250px;
-    margin-right: 10px;
+
 }
 
 .card {
     display: flex;
-    min-width: 1200px;
+    max-height: 300px;
     width: 100%;
     margin-bottom: 30px;
     border: 1px solid #149173;
     position: relative;
+    margin-right: 20px;
 }
  
+.card:hover {
+    background-color: rgba(20, 145, 115, .5);
+} 
+
 .card .date{
     display: flex;
     flex-direction: column;
@@ -178,22 +180,23 @@
     text-align: center;
     width: 70px;
     height: 60px;
-    color: #149173;
+    color: white;
     font-weight: bold;
     font-size: 1.2rem;
-    background-color: white;
+    background-color: #149173;
     position: absolute;
     right: -10px;
     top: -20px;
 }
 
-.date h1{
-    padding-top: 10px;
-    margin-bottom: 5px;
+.card:hover .date{
+    color: #149173 ;
+    background-color:white;
 }
 
 .right_1{
     width: 100%;
+
     margin: 20px;
     padding-top: 20px;
     padding-left: 20px;
@@ -201,23 +204,40 @@
 }
 
 .card h3{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
     color:  #FFA62B;
     margin-bottom: 10px;
 }
 
 .card h2{
-    font-size: 2rem;
+    font-size: 1.3rem;
     color:  #149173;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    
 }
 
 .card p{
+    font-size: 16px;
     margin-bottom: 20px;
-    line-height: 1.2;
+    color:#000;
+
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
-.card a{
+
+
+.card a:nth-last-child(1){
     color:#FFA62B;
 }
 
@@ -231,7 +251,6 @@
 	color: #149173;
 	border: 2px solid #149173;
 	width: 80px;
-	line-height: 1.5;
 }
 
 .more:hover{
