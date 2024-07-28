@@ -1,22 +1,22 @@
 @import url('reset.css');
 
-body{
+body {
     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     line-height: 1.5;
     font-size: 18px;
 }
 
-div{
-    
+div {
+
     display: block;
     margin: 0 auto;
-    }
+}
 
-a{
+a {
     text-decoration: none;
 }
 
-.top{
+.top {
     background-color: #EBF38B;
     height: 100px;
     padding: 30px 20px 20px;
@@ -24,7 +24,7 @@ a{
     margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+
     /* position: fixed;
     top: 0;
     left: 0;
@@ -33,13 +33,20 @@ a{
 
 }
 
-.top img{
+.top img {
     padding-left: 30px;
     max-width: 250px;
     margin-right: 80px;
 }
 
-.top ul{
+.top i {
+    margin-top: 12px;
+    margin-left: auto;
+    display: none;
+}
+
+.top ul {
+    margin-left: auto;
     padding-right: 80px;
     font-size: 1.2rem;
     margin-top: 10px;
@@ -47,160 +54,199 @@ a{
     display: flex;
 }
 
-.top li{
+.top li {
     margin-right: 20px;
 }
 
-.top li a{
+.top li a {
     display: block;
     color: black;
 }
 
-.top li a:hover{
+.top li a:hover {
     border-bottom: 3px solid #149173;
     font-weight: bold;
 }
 
-.banner{
+.banner {
     position: relative;
 }
 
-.banner img{
-    object-fit:cover;
+.banner img {
+    object-fit: cover;
     opacity: 0.5;
     width: 100%;
     max-height: 400px;
     height: 100%;
 }
 
-.banner h2{
+.banner h2 {
     font-size: 4.5vw;
     color: #149173;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     margin-bottom: 10px;
-    
+
 }
 
-.center{
+.center {
     width: 1200px;
     display: block;
     margin: 0 auto;
-     
+
 }
 
-.bottom{
+.bottom {
     background-color: #EBF38B;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.bottom img{
+.bottom img {
     display: block;
     margin: 10px auto;
     max-width: 250px;
 }
 
-.bottom ul{
+.bottom ul {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
- }
+}
 
- .bottom li{
+.bottom li {
     margin-right: 30px;
- }
+}
 
-.bottom .line{
+.bottom .line {
     content: '';
     border-bottom: 1px solid black;
     margin: 0 0 10px 28%;
-    max-width:650px;
+    max-width: 650px;
 }
 
- .bottom p{
+.bottom p {
     text-align: center;
     margin-bottom: 20px;
- }
+}
 
- .bottom a{
+.bottom a {
     color: black;
- }
+}
 
- .ex{
+.ex {
     font-size: 14px;
- }
- 
- @media screen and (max-width: 1200px){
-    .top img{
+}
+
+@media screen and (max-width: 1200px) {
+    .top img {
         padding-left: 20px;
     }
-    .top ul{
+
+    .top ul {
         font-size: 1.6vw;
         padding: 0;
     }
 
-    .top li{
+    .top li {
         margin-right: 10px;
     }
 
- 
 
-    .center{
+
+    .center {
         width: auto;
-    } 
+    }
 
-    .bottom ul{
+    .bottom ul {
         font-size: 1vw;
     }
 
-    .bottom li{
+    .bottom li {
         margin-right: 20px;
     }
 
-    .bottom p{
+    .bottom p {
         font-size: 1vw;
         margin-bottom: 10px;
     }
 
-    .bottom .line{
+    .bottom .line {
 
         max-width: auto;
         width: 40%;
     }
 
-    .bottom img{
+    .bottom img {
         max-width: 150px;
     }
 
-    .ex{
+    .ex {
         font-size: 8px;
     }
 }
 
-@media screen and (max-width: 746px){
-    .top img{
+@media screen and (max-width: 746px) {
+    .top img {
         padding-left: 20px;
         max-width: 200px;
     }
 
-    .top ul{
-        display: none;
-        }
+    .top ul {
+        /* display: none; */
+    }
 
 }
 
-@media screen and (max-width: 500px){
-    .top img{
+@media screen and (max-width: 500px) {
+    .top {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+
+    .top img {
         padding-left: 10px;
         max-width: 200px;
     }
 
-    .bottom img{
+    .top i {
+        display: block;
+    }
+
+    .top ul {
+        display: none;
+        flex-direction: column;
+        background-color: #EBF38B;
+        position: fixed;
+        top: 90px;
+        right:0;
+        /* height: calc(100vh - 90px); */
+        width: 100vw;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .top li {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .top li a {
+        line-height: 60px;
+        display: block;
+    }
+
+
+    .bottom img {
         max-width: 100px;
     }
 }

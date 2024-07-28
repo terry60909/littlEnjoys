@@ -5,21 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LittlEnJoy</title>
 </head>
 <body>
+    <script>
+        function showMenuBar() {
+            let menuBar = document.getElementById("menuBar");
+
+            if (menuBar.style.display == "none") {
+                menuBar.style.display = "block";
+            } else {
+                menuBar.style.display = "none";
+            }
+
+        }
+
+        function filterStore(type){
+            
+            let tea = document.getElementsByClassName("tea");
+            let milktea = document.getElementsByClassName("milktea");
+            let fruittea = document.getElementsByClassName("fruittea");
+            
+
+            switch (type) {
+                
+                case 'all':
+                for(i = 0; i < tea.length;i++){        
+                tea[i].style.display = "block";
+                }
+                for(j = 0; j < milktea.length;j++){
+                milktea[j].style.display = "block";
+                }
+                for(k = 0; k < fruittea.length;k++){
+                fruittea[k].style.display = "block";
+                }
+                break;
+                case 'tea':      
+                for(i = 0; i < tea.length;i++){        
+                tea[i].style.display = "block";
+                }
+                for(j = 0; j < milktea.length;j++){
+                milktea[j].style.display = "none";
+                }
+                for(k = 0; k < fruittea.length;k++){
+                fruittea[k].style.display = "none";
+                }
+                break;
+                case 'milktea':
+                for(i = 0; i < tea.length;i++){        
+                tea[i].style.display = "none";
+                }
+                for(j = 0; j < milktea.length;j++){
+                milktea[j].style.display = "block";
+                }
+                for(k = 0; k < fruittea.length;k++){
+                fruittea[k].style.display = "none";
+                }
+                break;
+                case 'fruittea':
+                for(i = 0; i < tea.length;i++){        
+                tea[i].style.display = "none";
+                }
+                for(j = 0; j < milktea.length;j++){
+                milktea[j].style.display = "none";
+                }
+                for(k = 0; k < fruittea.length;k++){
+                fruittea[k].style.display = "block";
+                }
+                break;
+            }          
+        }
+
+    </script>
+
     <div>
         <div class="top">
             <a href="./index.html"><img src="./img/LOGO4.png" alt=""></a>
-            <i></i>
-            <ul>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenuBar()"></i>
+            <ul id="menuBar">
                 <li><a href="./aboutus1.html">關於我們</a></li>
                 <li><a href="./menu.html">推薦飲品</a></li>
                 <li><a href="./news.html">最新活動</a></li>
                 <li><a href="./store.html">門市據點</a></li>
                 <li><a href="./contactus.html">聯絡我們</a></li>
                 <li><a href="./franchise.html">加盟資訊</a></li>
-            </ul>  
+            </ul>
         </div>
         <div class="banner">
             <img src="./img/b2.jpg" alt="">
@@ -29,33 +100,33 @@
         <div class="center">
             <div class="items"> 
            <ul>
-                <li><a href="#">全部飲品</a></li>
-                <li><a href="#">純茶系列</a></li>
-                <li><a href="#">奶茶飲品</a></li>                
-                <li><a href="#">果茶系列</a></li>
+                <li><button class="button1" onclick="filterStore('all')">全部飲品</button></li>
+                <li><button class="button1" onclick="filterStore('tea')">純茶系列</button></li>
+                <li><button class="button1" onclick="filterStore('milktea')">奶茶飲品</button></li>                
+                <li><button class="button1" onclick="filterStore('fruittea')">果茶系列</button></li>
             </ul>
             </div>
            
             <div class="menu"> 
             <span class="line"></span>
-                <ul>
-                    <li><a href=""><img src="./img/blacktea1.jpg" alt=""><h3>-復刻紅茶-</h3></a></li>
-                    <li><a href=""><img src="./img/woolong.png" alt=""><h3>-高山烏龍-</h3></a></li>
-                    <li><a href=""><img src="./img/woolong.png" alt=""><h3>-四季青茶-</h3></a></li>
-                    <li><a href=""><img src="./img/woolong.png" alt=""><h3>-台灣綠茶-</h3></a></li>
-                    <li><a href=""><img src="./img/flowertea.png" alt=""><h3>-茉莉花茶-</h3></a></li>
+                <ul id="menu">
+                    <li class="tea"><a href=""><img src="./img/blacktea1.jpg" alt=""><h3>-復刻紅茶-</h3></a></li>
+                    <li class="tea"><a href=""><img src="./img/woolong.png" alt=""><h3>-高山烏龍-</h3></a></li>
+                    <li class="tea"><a href=""><img src="./img/woolong.png" alt=""><h3>-四季青茶-</h3></a></li>
+                    <li class="tea"><a href=""><img src="./img/woolong.png" alt=""><h3>-台灣綠茶-</h3></a></li>
+                    <li class="tea"><a href=""><img src="./img/flowertea.png" alt=""><h3>-茉莉花茶-</h3></a></li>
              
-                    <li><a href=""><img src="./img/milktea.png" alt=""><h3>-復刻奶茶-</h3></a></li>
-                    <li><a href=""><img src="./img/milktea.png" alt=""><h3>-太妃糖奶茶-</h3></a></li>
-                    <li><a href=""><img src="./img/milktea.png" alt=""><h3>-烏龍奶茶-</h3></a></li>
-                    <li><a href=""><img src="./img/mmktea.png" alt=""><h3>-鍋煮奶茶-</h3></a></li>
-                    <li><a href=""><img src="./img/mocha.png" alt=""><h3>-抹茶奶綠-</h3></a></li>
+                    <li class="milktea"><a href=""><img src="./img/milktea.png" alt=""><h3>-復刻奶茶-</h3></a></li>
+                    <li class="milktea"><a href=""><img src="./img/milktea.png" alt=""><h3>-太妃糖奶茶-</h3></a></li>
+                    <li class="milktea"><a href=""><img src="./img/milktea.png" alt=""><h3>-烏龍奶茶-</h3></a></li>
+                    <li class="milktea"><a href=""><img src="./img/mmktea.png" alt=""><h3>-鍋煮奶茶-</h3></a></li>
+                    <li class="milktea"><a href=""><img src="./img/mocha.png" alt=""><h3>-抹茶奶綠-</h3></a></li>
               
-                    <li><a href=""><img src="./img/pinappletea.png" alt=""><h3>-鳳梨冰茶-</h3></a></li>
-                    <li><a href=""><img src="./img/fruittea.png" alt=""><h3>-特調水果茶-</h3></a></li>
-                    <li><a href=""><img src="./img/fruittea.png" alt=""><h3>-草莓紅茶-</h3></a></li>
-                    <li><a href=""><img src="./img/lemonbltea.png" alt=""><h3>-檸檬紅茶-</h3></a></li>
-                    <li><a href=""><img src="./img/lemonbltea.png" alt=""><h3>-冬瓜檸檬-</h3></a></li>
+                    <li class="fruittea"><a href=""><img src="./img/pinappletea.png" alt=""><h3>-鳳梨冰茶-</h3></a></li>
+                    <li class="fruittea"><a href=""><img src="./img/fruittea.png" alt=""><h3>-特調水果茶-</h3></a></li>
+                    <li class="fruittea"><a href=""><img src="./img/fruittea.png" alt=""><h3>-草莓紅茶-</h3></a></li>
+                    <li class="fruittea"><a href=""><img src="./img/lemonbltea.png" alt=""><h3>-檸檬紅茶-</h3></a></li>
+                    <li class="fruittea"><a href=""><img src="./img/lemonbltea.png" alt=""><h3>-冬瓜檸檬-</h3></a></li>
                 </ul>
                 <span class="line"></span>
             </div>

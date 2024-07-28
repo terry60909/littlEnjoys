@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LittlEnJoy</title>
 </head>
+
 <body>
+
+    <script>
+        function showMenuBar() {
+            let menuBar = document.getElementById("menuBar");
+
+            if (menuBar.style.display == "none") {
+                menuBar.style.display = "block";
+            } else {
+                menuBar.style.display = "none";
+            }
+
+        }
+    </script>
     <div>
         <div class="top">
             <a href="./index.html"><img src="./img/LOGO4.png" alt=""></a>
-            <i></i>
-            <ul>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenuBar()"></i>
+            <ul id="menuBar">
                 <li><a href="./aboutus1.html">關於我們</a></li>
                 <li><a href="./menu.html">推薦飲品</a></li>
                 <li><a href="./news.html">最新活動</a></li>
                 <li><a href="./store.html">門市據點</a></li>
                 <li><a href="./contactus.html">聯絡我們</a></li>
                 <li><a href="./franchise.html">加盟資訊</a></li>
-            </ul>  
+            </ul>
         </div>
-        
+
         <div class="main">
             <a href="#" class="left"></a>
             <a href="#" class="right"></a>
@@ -34,16 +50,17 @@
         </div>
 
         <div class="center">
-            
+
             <div class="main1">
                 <h2 class="tt">推薦飲品 BEST SELLS</h2>
                 <div>
                     <div class="up">
-                    <img src="./img/blacktea2.jpg" alt="">
-                    <div class="introduce">
-                    <h2>復刻紅茶</h2>
-                    <p>復刻紅茶的特點在於它的茶湯色澤紅潤，香氣高雅而豐富，口感圓潤醇和，帶有淡淡的甜味和果香，令人回味無窮。這種茶不僅適合單獨品嚐，還可以搭配各種茶點和小吃，讓人在品茶的過程中享受到悠閒和寧靜。</p>
-                    </div>
+                        <img src="./img/blacktea2.jpg" alt="">
+                        <div class="introduce">
+                            <h2>復刻紅茶</h2>
+                            <p>復刻紅茶的特點在於它的茶湯色澤紅潤，香氣高雅而豐富，口感圓潤醇和，帶有淡淡的甜味和果香，令人回味無窮。這種茶不僅適合單獨品嚐，還可以搭配各種茶點和小吃，讓人在品茶的過程中享受到悠閒和寧靜。
+                            </p>
+                        </div>
                     </div>
                     <ul>
                         <li><img src="./img/blacktea1.jpg" alt=""></li>
@@ -59,76 +76,76 @@
                 <h2 class="tt">最新活動 NEWS</h2>
                 <div class="main2_card">
                     <div class="card">
-                    <a href="#"><img src="./img/smallcard.png" alt="">
-                        <div class="date">
-                            <h1>MAR</h1>
-                            <h4>04</h4>
-                        </div>
-                        <div class="right_1">                   
-                        <h3>[門市開幕]</h3>
-                        <h2>LittlEnjoys(新北宏匯店)</h2>
-                        <P>★LittlEnjoys(新北宏匯店)<br>
-                        地址:新北市新莊區新北大道3號<br>
-                        電話:02-22314449
-                        </P>
-                        <a href="#">查看更多</a>
-                               
-                        </div>
-                    </a>
+                        <a href="news.html"><img src="./img/storef1.png" alt="">
+                            <div class="date">
+                                <h1>MAR</h1>
+                                <h4>04</h4>
+                            </div>
+                            <div class="right_1">
+                                <h3>[門市開幕]</h3>
+                                <h2>LittlEnjoys(新北宏匯店)</h2>
+                                <P>★LittlEnjoys(新北宏匯店)<br>
+                                    地址:新北市新莊區新北大道3號<br>
+                                    電話:02-22314449
+                                </P>
+                                <a href="news.html">查看更多</a>
+
+                            </div>
+                        </a>
                     </div>
 
                     <div class="card">
-                        <a href="#"><img src="./img/smallcard.png" alt="">
-                        <div class="date">
-                            <h1>JUL</h1>
-                            <h4>12</h4>
-                        </div>
-                        <div class="right_1">                   
-                        <h3>[優惠活動]</h3>                  
-                        <h2>現在是星期五晚上~週五來店買一送一！享受雙倍的美味！</h2>
-                        <P>活動資訊：<br>
-                        活動名稱: 週五優惠 - 買一送一！<br>
-                        活動時間: （限週五當天13:00~22:00）<br>
-                        活動內容: 凡在週五下午13點到店消費，飲料享買一送一優惠！</P>
-                        <a href="#">查看更多</a> 
-                        </div>
-                        </a> 
+                        <a href="news.html"><img src="./img/banner02_1.png" alt="">
+                            <div class="date">
+                                <h1>JUL</h1>
+                                <h4>12</h4>
+                            </div>
+                            <div class="right_1">
+                                <h3>[優惠活動]</h3>
+                                <h2>現在是星期五晚上~週五來店買一送一！享受雙倍的美味！</h2>
+                                <P>活動資訊：<br>
+                                    活動名稱: 週五優惠 - 買一送一！<br>
+                                    活動時間: （限週五當天13:00~22:00）<br>
+                                    活動內容: 凡在週五下午13點到店消費，飲料享買一送一優惠！</P>
+                                <a href="news.html">查看更多</a>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-                <a href="news.html" class="more">更多活動</a>
+            <a href="news.html" class="more">更多活動</a>
         </div>
-            
-        
+
+
 
         <div class="bottom">
             <a href="#"><img src="./img/LOGO4.png" alt=""></a>
             <span class="line"></span>
             <div class="bt_center">
                 <ul>
-                    <li>電話 :  (03)491-2333</li>
-                <li>傳真 : 886-4-23812576</li>
-                <li>加盟 / 客服專線 :  0800-333-111</li>
-            </ul>              
-            <p>地址 : 桃園市平鎮區復旦里文化街898號1樓</p>
-                
-            <ul>
-                <li><a href="https://www.facebook.com/"><img src="./img/FB.png" alt=""></a></li>
-                <li><a href="https://www.instagram.com/"><img src="./img/IG.png" alt=""></a></li>
-                <li><a href="https://line.me/tw/"><img src="./img/Line.png" alt=""></a></li>
-            </ul>      
-            <ul>
-                <li>服務條款</li>
-                <li>免責聲明</li>
-                <li>隱私權保護</li>
-            </ul>
+                    <li>電話 : (03)491-2333</li>
+                    <li>傳真 : 886-4-23812576</li>
+                    <li>加盟 / 客服專線 : 0800-333-111</li>
+                </ul>
+                <p>地址 : 桃園市平鎮區復旦里文化街898號1樓</p>
+
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="./img/FB.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="./img/IG.png" alt=""></a></li>
+                    <li><a href="https://line.me/tw/"><img src="./img/Line.png" alt=""></a></li>
+                </ul>
+                <ul>
+                    <li>服務條款</li>
+                    <li>免責聲明</li>
+                    <li>隱私權保護</li>
+                </ul>
             </div>
             <span class="line"></span>
-            <p class="ex">本網站為緯育TibaMe前端設計工程師班第93期學員專題作品，本平台僅供學習、展示之用。參考資料:五桐號、玉津餐飲國際有限公司、春陽茶事。若有侵權疑慮，您可以私訊[緯育TibaMe]，後續會由專人協助處理。</p> 
-        </div>   
+            <p class="ex">
+                本網站為緯育TibaMe前端設計工程師班第93期學員專題作品，本平台僅供學習、展示之用。參考資料:五桐號、玉津餐飲國際有限公司、春陽茶事。若有侵權疑慮，您可以私訊[緯育TibaMe]，後續會由專人協助處理。
+            </p>
+        </div>
     </div>
 </body>
+
 </html>
-
-
-

@@ -12,12 +12,17 @@
     margin-bottom: 20px;
 }
 
+.main{
+    display: block;
+    margin: 0 auto;
+    
+}
+
 .center ul{
     font-size: 28px;
 }
 
 .center li{
-    
     margin-bottom: 20px;
 }
 
@@ -34,14 +39,50 @@ input{
     border-radius: 4px;
 }
 
+textarea{
+    width: 100%;
+    border-radius: 4px;
+}
+
 .send{
     display: block;
     margin: 0 auto;
     text-align: center;
     border-radius: 20%;
+    background-color: #fff;
 }
 
 .send:hover{
     background-color:#EBF38B;
     color: white;
+}
+
+@media screen and (max-width: 1200px){
+    .main{
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .center h2{
+        font-size: 36px;
+    }
+    
+    .center  p {
+        font-size: 16px;
+    }
+    
+    .center ul{
+        font-size: 16px;
+    }
+
+    select{
+        font-size: 16px;
+    }
+    
+    input{
+        font-size: 16px;
+    }
+    
+
 }

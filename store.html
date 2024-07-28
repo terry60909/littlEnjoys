@@ -5,21 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/store.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>LittlEnJoy</title>
 </head>
 <body>
+    <script>
+        function filterStore(type){
+            let storeNorth = document.getElementById("store_north");
+            let storeMiddle = document.getElementById("store_middle");
+            let storeSouth = document.getElementById("store_south");
+
+            switch (type) {
+                case 'all':
+                storeNorth.style.display ="block";
+                storeMiddle.style.display = "block";
+                storeSouth.style.display = "block";
+                break;
+                case 'north':
+                storeNorth.style.display ="block";
+                storeMiddle.style.display = "none";
+                storeSouth.style.display = "none";
+                break;
+                case 'middle':
+                storeNorth.style.display ="none";
+                storeMiddle.style.display = "block";
+                storeSouth.style.display = "none";
+                break;
+                case 'south':
+                storeNorth.style.display ="none";
+                storeMiddle.style.display = "none";
+                storeSouth.style.display = "block";
+                break;
+            }
+        }
+
+        function showMenuBar() {
+            let menuBar = document.getElementById("menuBar");
+
+            if (menuBar.style.display == "none") {
+                menuBar.style.display = "block";
+            } else {
+                menuBar.style.display = "none";
+            }
+
+        }
+    </script>
     <div>
         <div class="top">
             <a href="./index.html"><img src="./img/LOGO4.png" alt=""></a>
-            <i></i>
-            <ul>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenuBar()"></i>
+            <ul id="menuBar">
                 <li><a href="./aboutus1.html">關於我們</a></li>
                 <li><a href="./menu.html">推薦飲品</a></li>
                 <li><a href="./news.html">最新活動</a></li>
                 <li><a href="./store.html">門市據點</a></li>
                 <li><a href="./contactus.html">聯絡我們</a></li>
                 <li><a href="./franchise.html">加盟資訊</a></li>
-            </ul>  
+            </ul>
         </div>
         <div class="banner">
             <img src="./img/b4.jpg" alt="">
@@ -29,10 +72,10 @@
         <div class="center">
             <div class="items">
             <ul>
-                <li><a href="#">全部</a></li>
-                <li><a href="#">北部</a></li>
-                <li><a href="#">中部</a></li>
-                <li><a href="#">南部</a></li>
+                <li><button class="button1" onclick="filterStore('all')">全部</button></li>
+                <li><button class="button1" onclick="filterStore('north')">北部</button></li>
+                <li><button class="button1" onclick="filterStore('middle')">中部</button></li>
+                <li><button class="button1" onclick="filterStore('south')">南部</button></li>
             </ul>
             </div>
             <span class="line"></span>
@@ -46,7 +89,7 @@
                 <li>導航</li>
             </ul>
             
-            <div class="store_north">
+            <div id="store_north">
                 <ul>
                 <li><h2>台北復興店</h2></li>
                 <li><p>02-25111111</p></li>
@@ -56,38 +99,38 @@
                 </ul>
                 
                 <ul>
-                <li><h2>台北復興店</h2></li>
-                <li><p>02-25111111</p></li>
-                <li><p>台北市中山區復興北路123號</p></li>
-                <li><a href="tel:02-25111111"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>台北西門店</h2></li>
+                <li><p>02-23955555</p></li>
+                <li><p>台北市松山區八德路四段76號</p></li>
+                <li><a href="tel:02-23955555"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
                 
                 <ul>
-                <li><h2>台北復興店</h2></li>
-                <li><p>02-25111111</p></li>
-                <li><p>台北市中山區復興北路123號</p></li>
-                <li><a href="tel:02-25111111"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>台北公館店</h2></li>
+                <li><p>02-25561771</p></li>
+                <li><p>台北市士林區德行西路156號</p></li>
+                <li><a href="tel:02-25561771"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
 
                 <ul>
-                <li><h2>台北復興店</h2></li>
-                <li><p>02-25111111</p></li>
-                <li><p>台北市中山區復興北路123號</p></li>
-                <li><a href="tel:02-25111111"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>新北宏匯店</h2></li>
+                <li><p>02-22314449</p></li>
+                <li><p>新北市新莊區新北大道3號</p></li>
+                <li><a href="tel:02-22314449"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
 
                 <ul>
-                <li><h2>台北復興店</h2></li>
-                <li><p>02-25111111</p></li>
-                <li><p>台北市中山區復興北路123號</p></li>
-                <li><a href="tel:02-25111111"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>桃園中壢店</h2></li>
+                <li><p>03-4994444</p></li>
+                <li><p>桃園市中壢區中美路123號</p></li>
+                <li><a href="tel:03-4994444"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
             </div>
-            <div class="store_middle">
+            <div id="store_middle">
                 <ul>
                 <li><h2>台中朝馬店</h2></li>
                 <li><p>04-2483883</p></li>
@@ -97,44 +140,60 @@
                 </ul>
 
                 <ul>
-                <li><h2>台中朝馬店</h2></li>
-                <li><p>04-2483883</p></li>
-                <li><p>台中市西屯區朝富路630號</p></li>
-                <li><a href="tel:04-2483883"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>台中美村店</h2></li>
+                <li><p>04-2320084</p></li>
+                <li><p>台中市西區美村路一段95號</p></li>
+                <li><a href="tel:04-2320084"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
 
                 <ul>
-                <li><h2>台中朝馬店</h2></li>
-                <li><p>04-2483883</p></li>
-                <li><p>台中市西屯區朝富路630號</p></li>
-                <li><a href="tel:04-2483883"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>台中東海店</h2></li>
+                <li><p>04-2432085</p></li>
+                <li><p>台中市龍井區新興路1巷1之1號</p></li>
+                <li><a href="tel:04-2432085"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
 
                 <ul>
-                <li><h2>台中朝馬店</h2></li>
-                <li><p>04-2483883</p></li>
-                <li><p>台中市西屯區朝富路630號</p></li>
-                <li><a href="tel:04-2483883"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>台中豐原店</h2></li>
+                <li><p>04-22525793</p></li>
+                <li><p>台中市豐原區中正路273號</p></li>
+                <li><a href="tel:04-22525793"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
                 
                 <ul>
-                <li><h2>台中朝馬店</h2></li>
-                <li><p>04-2483883</p></li>
-                <li><p>台中市西屯區朝富路630號</p></li>
-                <li><a href="tel:04-2483883"><i><img src="./img/phone.png" alt=""></i></a></li>
+                <li><h2>台中沙鹿店</h2></li>
+                <li><p>04-22488883</p></li>
+                <li><p>台中市沙鹿區台灣大道七段630號</p></li>
+                <li><a href="tel:04-22488883"><i><img src="./img/phone.png" alt=""></i></a></li>
                 <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
                 </ul>
 
             </div>
-            <div class="store_south">
+            <div id="store_south">
             <ul>
-            <li><h2>高雄義大店</h2></li>
-            <li><p>07-3645222</p></li>
-            <li><p>高雄市大樹區學城路一段610號</p></li>
-            <li><a href="tel:07-3645222"><i><img src="./img/phone.png" alt=""></i></a></li>
+            <li><h2>台南永康店</h2></li>
+            <li><p>06-25305545</p></li>
+            <li><p>台南市永康區中正路537號</p></li>
+            <li><a href="tel:06-25305545"><i><img src="./img/phone.png" alt=""></i></a></li>
+            <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
+            </ul>
+
+            <ul>
+            <li><h2>台南金華店</h2></li>
+            <li><p>06-25553045</p></li>
+            <li><p>台南市永康區中正路537號</p></li>
+            <li><a href="tel:06-25553045"><i><img src="./img/phone.png" alt=""></i></a></li>
+            <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
+            </ul>
+
+            <ul>
+            <li><h2>高雄楠梓店</h2></li>
+            <li><p>07-33645222</p></li>
+            <li><p>高雄市楠梓區德賢路158號</p></li>
+            <li><a href="tel:07-33645222"><i><img src="./img/phone.png" alt=""></i></a></li>
             <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
             </ul>
 
@@ -147,26 +206,10 @@
             </ul>
 
             <ul>
-            <li><h2>高雄義大店</h2></li>
-            <li><p>07-3645222</p></li>
-            <li><p>高雄市大樹區學城路一段610號</p></li>
-            <li><a href="tel:07-3645222"><i><img src="./img/phone.png" alt=""></i></a></li>
-            <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
-            </ul>
-
-            <ul>
-            <li><h2>高雄義大店</h2></li>
-            <li><p>07-3645222</p></li>
-            <li><p>高雄市大樹區學城路一段610號</p></li>
-            <li><a href="tel:07-3645222"><i><img src="./img/phone.png" alt=""></i></a></li>
-            <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
-            </ul>
-
-            <ul>
-            <li><h2>高雄義大店</h2></li>
-            <li><p>07-3645222</p></li>
-            <li><p>高雄市大樹區學城路一段610號</p></li>
-            <li><a href="tel:07-3645222"><i><img src="./img/phone.png" alt=""></i></a></li>
+            <li><h2>高雄瑞隆店</h2></li>
+            <li><p>07-3831221</p></li>
+            <li><p>高雄市前鎮區瑞隆路552號</p></li>
+            <li><a href="tel:07-3831221"><i><img src="./img/phone.png" alt=""></i></a></li>
             <li><a href="https://www.google.com.tw/maps/place/%E7%B7%AF%E8%82%B2TibaMe%E9%99%84%E8%A8%AD%E5%8F%B0%E5%8C%97%E8%81%B7%E8%A8%93%E4%B8%AD%E5%BF%83/@25.052128,121.5410589,17z/data=!3m2!4b1!5s0x3442abddfc0bc85f:0x547998e4a2421286!4m5!3m4!1s0x3442abe6b0446815:0xf006dde8c27afcc7!8m2!3d25.052128!4d121.5432529?hl=zh-TW"><i><img src="./img/address.png" alt=""></i></a></li>
             </ul>
             </div>

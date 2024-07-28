@@ -5,22 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/contactus.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LittlEnJoy</title>
 </head>
 <body>
+    <script>
+        function showMenuBar() {
+            let menuBar = document.getElementById("menuBar");
+
+            if (menuBar.style.display == "none") {
+                menuBar.style.display = "block";
+            } else {
+                menuBar.style.display = "none";
+            }
+
+        }
+    </script>
+
     <div>
         <div class="top">
             <a href="./index.html"><img src="./img/LOGO4.png" alt=""></a>
-            <i></i>
-            <ul>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenuBar()"></i>
+            <ul id="menuBar">
                 <li><a href="./aboutus1.html">關於我們</a></li>
                 <li><a href="./menu.html">推薦飲品</a></li>
                 <li><a href="./news.html">最新活動</a></li>
                 <li><a href="./store.html">門市據點</a></li>
                 <li><a href="./contactus.html">聯絡我們</a></li>
                 <li><a href="./franchise.html">加盟資訊</a></li>
-            </ul>  
+            </ul>
         </div>
+        
         <div class="banner">
             <img src="./img/b5.jpg" alt="">
             <h2>聯絡我們 CONTACT US</h2>
@@ -30,7 +45,7 @@
             <h2>-聯絡表單-</h2>
             <p>感謝您拜訪，若有任何疑問或對我們的服務有任何建議，<br>歡迎填寫表單，我們將用最快速度與您聯絡。</p>
             
-            
+            <div class="main">
             <ul>
                 <li><label >&nbsp;&nbsp;問題分類:  </label><select name="sel">
                     <option value selected>請選擇分類</option>
@@ -42,8 +57,8 @@
                 <li><label><em>*</em>性別 Gender:  </label><input type="radio" name="gender" class="male" checked><span>男</span>
                     <input type="radio" name="gender" class="female"><span>女</span>
                 </li>
-                <li><label>&nbsp;&nbsp;年齡 Ages:  </label><input type="tel" class="ages" placeholder="年齡" maxlength="3"></li>
-                <li><label>&nbsp;&nbsp;手機 Phone:  </label><input type="tel"  class="phone" placeholder="09xxxxxxxx" maxlength="10" pattern="09\d{2}\-?d{3}\-d{3}"></li>
+                <li><label>&nbsp;&nbsp;年齡 Ages:  </label><input type="tel" class="ages" placeholder="年齡" maxlength="2"></li>
+                <li><label>&nbsp;&nbsp;手機 Phone:  </label><input type="tel"  class="phone" placeholder="09xxxxxxxx" maxlength="10" pattern="^09\d{8}$"></li>
                 <li><label><em>*</em>信箱 Email:  </label><input type="email" class="mail" placeholder="信箱" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></li>
                 <li><label>&nbsp;&nbsp;門市名稱 Store Name:  </label><input type="text" placeholder="門市名稱"></li>
                 <li><label>&nbsp;&nbsp;消費日期 Date:  </label><input type="date" ></li>
@@ -51,7 +66,7 @@
                 <li><input type="submit" class="send" value="送出"></li>
                 
             </ul>
-           
+        </div>
         </div>
         
             <div class="bottom">

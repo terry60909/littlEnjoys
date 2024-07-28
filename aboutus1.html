@@ -5,21 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/aboutus.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LittlEnJoy</title>
 </head>
 <body>
+    <script>
+        function showMenuBar() {
+            let menuBar = document.getElementById("menuBar");
+
+            if (menuBar.style.display == "none") {
+                menuBar.style.display = "block";
+            } else {
+                menuBar.style.display = "none";
+            }
+
+        }
+    </script>
+
     <div>
         <div class="top">
             <a href="./index.html"><img src="./img/LOGO4.png" alt=""></a>
-            <i></i>
-            <ul>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenuBar()"></i>
+            <ul id="menuBar">
                 <li><a href="./aboutus1.html">關於我們</a></li>
                 <li><a href="./menu.html">推薦飲品</a></li>
                 <li><a href="./news.html">最新活動</a></li>
                 <li><a href="./store.html">門市據點</a></li>
                 <li><a href="./contactus.html">聯絡我們</a></li>
                 <li><a href="./franchise.html">加盟資訊</a></li>
-            </ul>  
+            </ul>
         </div>
 
         <div class="banner">
