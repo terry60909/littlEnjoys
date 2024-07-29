@@ -170,23 +170,23 @@
 .main1 h4{
     font-size: 1.6rem;
     font-weight: bold;
-    position: absolute;
+    /* position: absolute;
     top: 15px;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100%; */
 }
 
 .main1 p{
     font-size: 18px;
     padding: 0 20px;
     width: 100%;
-    position: absolute;
+    /* position: absolute;
     top: 100px;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     font-weight: 600;
     line-height: 1.2;
     text-align: left;
