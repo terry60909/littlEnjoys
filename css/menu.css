@@ -83,16 +83,16 @@
     font-weight: bold;
 }
 
-.pages ul{
+#pages ul{
     display: flex;
     justify-content: center;
-    margin: 20px auto;
+    margin: 10px auto 20px;
 }
-.pages li{  
+#pages li{  
     margin: 0 5px;
 }
 
-.pages a{
+#pages button{
     display: block;
     min-width: 30px;
     height: 30px;
@@ -105,7 +105,7 @@
     box-sizing: border-box;
     
 }
-.pages a:hover{
+#pages button:hover{
     background-color:#EBF38B;
     color: white;
 }

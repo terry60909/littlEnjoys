@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js/jquery-3.7.1.js"></script> 
+    <script src="./js/jQuery.js"></script>    
     <title>LittlEnJoy</title>
 </head>
 
 <body>
-
     <script>
         function showMenuBar() {
             let menuBar = document.getElementById("menuBar");
@@ -21,9 +22,9 @@
             } else {
                 menuBar.style.display = "none";
             }
-
         }
     </script>
+     
     <div>
         <div class="top">
             <a href="./index.html"><img src="./img/LOGO4.png" alt=""></a>
@@ -38,14 +39,17 @@
             </ul>
         </div>
 
-        <div class="main">
+        <div id="main">
             <a href="#" class="left"></a>
             <a href="#" class="right"></a>
-            <ul>
-                <li><a href=""><img src="./img/banner02.png" alt=""></a></li>
+            <ul id="content">
+                <li><a href=""><img src="./img/banner01.png" class="image"></a></li>
+                <li><a href=""><img src="./img/banner02.png" class="image"></a></li>
+                <li><a href=""><img src="./img/banner03.png" class="image"></a></li>
+                <li><a href=""><img src="./img/banner04.png" class="image"></a></li>
             </ul>
             <ul id="contentbutton">
-                <li></li>
+                <!-- <li></li> -->
             </ul>
         </div>
 
@@ -55,19 +59,29 @@
                 <h2 class="tt">推薦飲品 BEST SELLS</h2>
                 <div>
                     <div class="up">
-                        <img src="./img/blacktea2.jpg" alt="">
+                        <img id="pic" src="./img/blacktea2.jpg" >
                         <div class="introduce">
-                            <h2>復刻紅茶</h2>
-                            <p>復刻紅茶的特點在於它的茶湯色澤紅潤，香氣高雅而豐富，口感圓潤醇和，帶有淡淡的甜味和果香，令人回味無窮。這種茶不僅適合單獨品嚐，還可以搭配各種茶點和小吃，讓人在品茶的過程中享受到悠閒和寧靜。
+                            <h2 id="drinkname">復刻紅茶</h2>
+                            <p id="drinkintroduce">復刻紅茶的特點在於它的茶湯色澤紅潤，香氣高雅而豐富，口感圓潤醇和，帶有淡淡的甜味和果香，令人回味無窮。這種茶不僅適合單獨品嚐，還可以搭配各種茶點和小吃，讓人在品茶的過程中享受到悠閒和寧靜。
                             </p>
                         </div>
                     </div>
                     <ul>
-                        <li><img src="./img/blacktea1.jpg" alt=""></li>
-                        <li><img src="./img/milktea.png" alt=""></li>
-                        <li><img src="./img/mocha.png" alt=""></li>
-                        <li><img src="./img/fruittea.png" alt=""></li>
-                        <li><img src="./img/lemonbltea.png" alt=""></li>
+                        <li><figure class="active"><img src="./img/blacktea1.jpg" alt=""> <h2>復刻紅茶</h2>
+                            <p>復刻紅茶的特點在於它的茶湯色澤紅潤，香氣高雅而豐富，口感圓潤醇和，帶有淡淡的甜味和果香，令人回味無窮。這種茶不僅適合單獨品嚐，還可以搭配各種茶點和小吃，讓人在品茶的過程中享受到悠閒和寧靜。
+                            </p></figure></li>
+                        <li><figure><img src="./img/milktea.png" alt=""> <h2>復刻奶茶</h2>
+                            <p>復刻奶茶的主要特點是它們採用古老的配方或製作方法，以保留原始的口味和風味。使用特定的茶葉、精選的奶精，以獨特的糖漿進行調味。
+                            </p></figure></li>
+                        <li><figure><img src="./img/mocha.png" alt=""> <h2>抹茶奶綠</h2>
+                            <p>抹茶奶綠是一種融合了抹茶和牛奶的飲品，具有獨特的抹茶香氣、牛奶的滑順口感和健康益處，成為了一款極具吸引力和多樣性的茶飲選擇，深受消費者喜愛。
+                            </p></figure></li>
+                        <li><figure><img src="./img/fruittea.png" alt=""> <h2>特調水果茶</h2>
+                            <p>特調水果茶以其新鮮水果的天然風味、豐富的營養素和清爽的口感，成為了消費者喜愛的健康飲品之一。它不僅適合各種時節，還因其多樣化的口味組合而吸引了廣泛的消費者群體。
+                            </p></figure></li>
+                        <li><figure><img src="./img/lemonbltea.png" alt=""> <h2>檸檬紅茶</h2>
+                            <p>檸檬紅茶以其紅茶的香濃口感和檸檬的清新酸甜味道而著稱，是一款清涼解渴、營養豐富並且口感平衡的茶飲選擇，適合各種場合和季節。
+                            </p></figure></li>
                     </ul>
                 </div>
                 <a href="./menu.html" class="more">更多飲品</a>

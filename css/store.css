@@ -95,32 +95,30 @@
 
 
 
-.pages ul {
+#pages ul{
     display: flex;
     justify-content: center;
     margin: 10px auto 20px;
 }
-
-.pages li {
+#pages li{  
     margin: 0 5px;
 }
 
-.pages a {
+#pages button{
     display: block;
     min-width: 30px;
     height: 30px;
     text-align: center;
     padding-top: 5px;
     border: 1px solid black;
-    font-size: 1rem;
+    font-size: 1rem; 
     color: black;
     background-color: white;
     box-sizing: border-box;
-
+    
 }
-
-.pages a:hover {
-    background-color: #EBF38B;
+#pages button:hover{
+    background-color:#EBF38B;
     color: white;
 }
 
