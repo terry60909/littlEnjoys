@@ -50,11 +50,11 @@ $(function () {
  
  
  
-      $(document).ready(function(){
-             $('figure').click(function(){
-                 let picSrc = $(this).find('img').attr('src')
-                 $('#pic').attr('src',picSrc)
-                 $(this).addClass('active')
-                 $('figure').not(this).removeClass('active')
-             })
-         })
+    //   $(document).ready(function(){
+    //          $('figure').click(function(){
+    //              let picSrc = $(this).find('img').attr('src')
+    //              $('#pic').attr('src',picSrc)
+    //              $(this).addClass('active')
+    //              $('figure').not(this).removeClass('active')
+    //          })
+    //      })
