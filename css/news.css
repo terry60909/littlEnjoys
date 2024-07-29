@@ -102,12 +102,12 @@
     top: -20px;
 }
 
-.newopen:hover .date{
+#news .newopen:hover .date{
     color: #149173 ;
     background-color:white;
 }
 
-.sales:hover .date{
+#news .sales:hover .date{
     color: #149173 ;
     background-color:white;
 }
