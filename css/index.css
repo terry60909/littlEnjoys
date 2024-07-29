@@ -320,6 +320,7 @@
 @media screen and (max-width: 500px){
     #contentButton {
         left: 35%;
+        bottom: 10px;
     }
 
     #main {
